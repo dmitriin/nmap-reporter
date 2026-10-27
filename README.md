@@ -12,7 +12,9 @@ Pentesters and sysadmins run Nmap all the time, but turning the raw XML into som
 
 ## Install
 
+```cmd
  go install github.com/dmitriin/nmap-reporter@latest
+ ```
 
 Or build from source:
 
@@ -24,8 +26,10 @@ Or build from source:
 
 ## Usage
 
+```cmd
  nmap -sV -oX scan.xml 127.0.0.1
  nmap-reporter -input scan.xml -output report.html
+ ```
 
 Options:
 
@@ -39,11 +43,15 @@ Examples:
 
 # English report (default)
 
+```cmd
  nmap-reporter -input scan.xml -output report-en.html
+ ```
 
 # Russian report
 
+```cmd
  nmap-reporter -input scan.xml -output report-ru.html -lang ru
+ ```
 
 ## What's in the report
 

@@ -12,7 +12,9 @@
 
 ## Установка
 
+```cmd
  go install github.com/dmitriin/nmap-reporter@latest
+ ```
 
 Или сборка из исходников:
 
@@ -24,8 +26,10 @@
 
 ## Использование
 
+```cmd
  nmap -sV -oX scan.xml 127.0.0.1
  nmap-reporter -input scan.xml -output report.html
+ ```
 
 Флаги:
 
@@ -39,11 +43,15 @@
 
 # Английский отчёт (по умолчанию)
 
+```cmd
  nmap-reporter -input scan.xml -output report-en.html
+ ```
 
 # Русский отчёт
 
+```cmd
  nmap-reporter -input scan.xml -output report-ru.html -lang ru
+ ```
 
 ## Что в отчёте
 
