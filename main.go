@@ -28,6 +28,8 @@ func main() {
 	output := flag.String("output", "report.html", "path to output file")
 	flag.Parse()
 
+	// fmt.Fprintf(os.Stderr, "DEBUG lang=%q\n", *lang)
+
 	T := i18n.New(*lang)
 
 	if *input == "" {

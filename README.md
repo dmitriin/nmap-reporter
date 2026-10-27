@@ -12,11 +12,11 @@ Pentesters and sysadmins run Nmap all the time, but turning the raw XML into som
 
 ## Install
 
- go install github.com/yourname/nmap-reporter@latest
+ go install github.com/dmitriin/nmap-reporter@latest
 
 Or build from source:
 
- git clone https://github.com/yourname/nmap-reporter.git
+ git clone https://github.com/dmitriin/nmap-reporter.git
  cd nmap-reporter
  go build -o nmap-reporter .
 
