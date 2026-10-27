@@ -2,6 +2,8 @@ package i18n
 
 // Strings — все переводимые строки приложения.
 type Strings struct {
+	LangCode  string
+	EmptyValue string
 	// CLI
 	UsageInput       string
 	UsageExtensions  string
@@ -27,7 +29,6 @@ type Strings struct {
 	ColVersion       string
 	Recommendations  string
 	PortLabel        string
-	EmptyValue       string
 
 	// Recommendations
 	Recs map[int]string
