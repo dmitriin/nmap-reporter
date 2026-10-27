@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nmap-reporter/nmap-reporter/internal/dispatch"
-	"github.com/nmap-reporter/nmap-reporter/internal/i18n"
-	"github.com/nmap-reporter/nmap-reporter/internal/parser"
-	"github.com/nmap-reporter/nmap-reporter/internal/report"
+	"github.com/dmitriin/nmap-reporter/internal/dispatch"
+	"github.com/dmitriin/nmap-reporter/internal/i18n"
+	"github.com/dmitriin/nmap-reporter/internal/parser"
+	"github.com/dmitriin/nmap-reporter/internal/report"
 )
 
 func main() {

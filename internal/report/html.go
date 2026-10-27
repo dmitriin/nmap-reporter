@@ -5,11 +5,11 @@ import (
 	"html/template"
 	"os"
 
-	"github.com/nmap-reporter/nmap-reporter/internal/i18n"
-	"github.com/nmap-reporter/nmap-reporter/internal/parser"
+	"github.com/dmitriin/nmap-reporter/internal/i18n"
+	"github.com/dmitriin/nmap-reporter/internal/parser"
 )
 
-//go:embed ../../templates/report.html
+//go:embed report.html
 var reportTemplate string
 
 // ReportData — то, что получает шаблон: результат скана + словарь строк.
