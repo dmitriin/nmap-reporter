@@ -31,7 +31,7 @@ func TryDispatch(subcommand string, args []string) (bool, error) {
 		if exitErr, ok := err.(*exec.ExitError); ok {
 			os.Exit(exitErr.ExitCode())
 		}
-		return true, fmt.Errorf("ошибка запуска %s: %w", binaryName, err)
+		return true, fmt.Errorf("failed to run %s: %w", binaryName, err)
 	}
 	return true, nil
 }

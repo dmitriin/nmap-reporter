@@ -5,15 +5,24 @@ import (
 	"html/template"
 	"os"
 
-	"github.com/dmitriin/nmap-reporter/internal/parser"
+	"github.com/nmap-reporter/nmap-reporter/internal/i18n"
+	"github.com/nmap-reporter/nmap-reporter/internal/parser"
 )
 
 //go:embed ../../templates/report.html
 var reportTemplate string
 
-func RenderHTML(result *parser.ScanResult, outPath string) error {
+// ReportData — то, что получает шаблон: результат скана + словарь строк.
+type ReportData struct {
+	*parser.ScanResult
+	T *i18n.Strings
+}
+
+func RenderHTML(result *parser.ScanResult, strings *i18n.Strings, outPath string) error {
 	funcs := template.FuncMap{
-		"recommendations": parser.RecommendationsForHost,
+		"recommendations": func(h parser.Host) []parser.Recommendation {
+			return parser.RecommendationsForHost(h, strings.Recs)
+		},
 	}
 	tmpl, err := template.New("report").Funcs(funcs).Parse(reportTemplate)
 	if err != nil {
@@ -24,5 +33,5 @@ func RenderHTML(result *parser.ScanResult, outPath string) error {
 		return err
 	}
 	defer f.Close()
-	return tmpl.Execute(f, result)
+	return tmpl.Execute(f, ReportData{ScanResult: result, T: strings})
 }
