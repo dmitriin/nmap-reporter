@@ -16,9 +16,11 @@ Pentesters and sysadmins run Nmap all the time, but turning the raw XML into som
 
 Or build from source:
 
+```cmd
  git clone https://github.com/dmitriin/nmap-reporter.git
  cd nmap-reporter
  go build -o nmap-reporter .
+ ```
 
 ## Usage
 
